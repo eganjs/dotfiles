@@ -1,0 +1,14 @@
+[color]
+	ui = auto
+[user]
+	name = Joseph Egan
+	email = joseph.s.egan@gmail.com
+[alias]
+	gl = log --graph --decorate --format=oneline --all
+	ap = add --patch
+	ca = commit --amend
+	cne = commit --amend --no-edit
+	fa = fetch --all --prune
+	ff = merge --ff-only
+[core]
+	editor = vim
