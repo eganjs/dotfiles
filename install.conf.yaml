@@ -11,5 +11,8 @@
     ~/.vim: vim
     ~/.vimrc: vimrc
     ~/.config/i3/config: i3
+    ~/.config/fontconfig/fonts.conf:
+      create: true
+      path: fonts.conf
     ~/.gitconfig: gitconfig
     ~/.Xresources: Xresources
