@@ -1,6 +1,6 @@
 ! Fonts
-*.font: xft:DejaVu Sans Mono:size=12
-Emacs.font: DejaVu Sans Mono:size=12
+*.font: xft:Monospace:size=12
+Emacs.font: Monospace:size=12
 Emacs.fontBackend: xft
 
 Xft.hinting: true
@@ -9,8 +9,7 @@ Xft.antialias: rgba
 Xft.rgba: rgb
 
 ! urxvt
-URxvt.font: xft:DejaVu Sans Mono:size=12
-URxvt.scrollBar:	false
+URxvt.scrollBar: false
 URxvt.perl-ext-common: clipboard,resize-font
 URxvt.letterSpace: -1
 
