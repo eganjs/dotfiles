@@ -1,0 +1,176 @@
+[colors]
+background = ${xrdb:background}
+foreground = ${xrdb:foreground}
+
+; Black + DarkGrey
+color0 = ${xrdb:color0}
+color8 = ${xrdb:color8}
+
+; DarkRed + Red
+color1 = ${xrdb:color1}
+color9 = ${xrdb:color9}
+
+; DarkGreen + Green
+color2 = ${xrdb:color2}
+color10 = ${xrdb:color10}
+
+; DarkYellow + Yellow
+color3 = ${xrdb:color3}
+color11 = ${xrdb:color11}
+
+; DarkBlue + Blue
+color4 = ${xrdb:color4}
+color12 = ${xrdb:color12}
+
+; DarkMagenta + Magenta
+color5 = ${xrdb:color5}
+color13 = ${xrdb:color13}
+
+; DarkCyan + Cyan
+color6 = ${xrdb:color6}
+color14 = ${xrdb:color14}
+
+; LightGrey + White
+color7 = ${xrdb:color7}
+color15 = ${xrdb:color15}
+
+[theme]
+background = ${colors.background}
+foreground = ${colors.foreground}
+foreground-accent = ${colors.color8}
+primary = ${colors.color14}
+alert = ${colors.color11}
+
+[bar/union]
+monitor = ${env:MONITOR:}
+width = 100%
+height = 18
+background = ${theme.background}
+foreground = ${theme.foreground}
+line-color = ${theme.foreground}
+line-size = 1
+module-margin = 1
+font-0 = Monospace:size=10;1
+modules-left = i3
+modules-center = date
+modules-right = wireless-network volume backlight cpu memory battery
+
+[module/i3]
+type = internal/i3
+pin-workspaces = true
+strip-wsnumbers = false
+index-sort = true
+enable-click = true
+fuzzy-match = true
+ws-icon-default = 
+format = <label-state><label-mode>
+label-mode = %mode%
+label-mode-padding = 2
+label-focused = %name%
+label-focused-padding = 2
+label-unfocused = %name%
+label-unfocused-padding = 2
+label-visible = %name%
+label-visible-padding = 2
+label-urgent = %name%
+label-urgent-padding = 2
+label-focused-underline = ${theme.foreground}
+label-urgent-underline = ${theme.alert}
+
+[module/date]
+type = internal/date
+date = %A, %d %B %Y %H:%M:%S
+
+[module/wireless-network]
+type = internal/network
+interface = wlp1s0
+interval = 10
+ping-interval = 10
+format-connected = <label-connected> <ramp-signal>
+format-disconnected = <label-disconnected>
+format-packetloss = <label-packetloss>
+label-connected = %essid%
+label-disconnected = NO NETWORK
+label-packetloss = %essid% !
+ramp-signal-0 = ▁
+ramp-signal-1 = ▂
+ramp-signal-2 = ▃
+ramp-signal-3 = ▄
+ramp-signal-4 = ▅
+ramp-signal-5 = ▆
+ramp-signal-6 = ▇
+ramp-signal-7 = █
+ramp-signal-foreground = ${theme.primary}
+
+[module/volume]
+type = internal/pulseaudio
+interval = 3
+use-ui-max = true
+format-volume = <label-volume> <ramp-volume>
+label-volume = VOL
+format-muted = <label-muted> <ramp-volume>
+label-muted = MUT
+label-muted-foreground = ${theme.foreground-accent}
+ramp-volume-0 = ▁
+ramp-volume-1 = ▂
+ramp-volume-2 = ▃
+ramp-volume-3 = ▄
+ramp-volume-4 = ▅
+ramp-volume-5 = ▆
+ramp-volume-6 = ▇
+ramp-volume-7 = █
+ramp-volume-foreground = ${theme.primary}
+
+[module/backlight]
+type = internal/xbacklight
+format = <label>
+label = BCK
+
+[module/cpu]
+type = internal/cpu
+interval = 0.5
+format = <label> <ramp-coreload>
+label = CPU
+ramp-coreload-spacing = 0
+ramp-coreload-0 = ▁
+ramp-coreload-1 = ▂
+ramp-coreload-2 = ▃
+ramp-coreload-3 = ▄
+ramp-coreload-4 = ▅
+ramp-coreload-5 = ▆
+ramp-coreload-6 = ▇
+ramp-coreload-7 = █
+ramp-coreload-foreground = ${theme.primary}
+
+[module/memory]
+type = internal/memory
+format = <label> <ramp-used><ramp-swap-used>
+label = RAM
+ramp-used-0 = ▁
+ramp-used-1 = ▂
+ramp-used-2 = ▃
+ramp-used-3 = ▄
+ramp-used-4 = ▅
+ramp-used-5 = ▆
+ramp-used-6 = ▇
+ramp-used-7 = █
+ramp-used-foreground = ${theme.primary}
+ramp-swap-used-0 = ▁
+ramp-swap-used-1 = ▂
+ramp-swap-used-2 = ▃
+ramp-swap-used-3 = ▄
+ramp-swap-used-4 = ▅
+ramp-swap-used-5 = ▆
+ramp-swap-used-6 = ▇
+ramp-swap-used-7 = █
+ramp-swap-used-foreground = ${theme.primary}
+
+[module/battery]
+type = internal/battery
+full-at = 98
+format-charging = <label-charging>
+format-discharging = <label-discharging>
+format-full = <label-full>
+label-charging = CHR %time%
+label-discharging = BAT %time%
+label-full = FUL 00:00:00
