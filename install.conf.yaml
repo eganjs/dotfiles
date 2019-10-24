@@ -14,5 +14,6 @@
     ~/.config/fontconfig/fonts.conf:
       create: true
       path: fonts.conf
+    ~/.config/polybar: polybar
     ~/.gitconfig: gitconfig
     ~/.Xresources: Xresources
