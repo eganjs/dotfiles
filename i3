@@ -105,6 +105,12 @@ bindsym $mod+Mod1+Down  resize grow   height 10 px or 1 ppt
 bindsym $mod+Mod1+Left  resize shrink width  10 px or 1 ppt
 bindsym $mod+Mod1+Right resize grow   width  10 px or 1 ppt
 
+bindsym $mod+Mod1+1 resize set width  960 px
+bindsym $mod+Mod1+2 resize set width 1024 px
+bindsym $mod+Mod1+3 resize set width 1280 px
+bindsym $mod+Mod1+4 resize set width 1366 px
+bindsym $mod+Mod1+5 resize set width 1440 px
+
 # split
 bindsym $mod+x split toggle
 
