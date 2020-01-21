@@ -1,18 +1,19 @@
 [color]
-	ui = auto
+  ui = auto
 [user]
-	name = Joseph Egan
-	email = joseph.s.egan@gmail.com
+  email = joseph.s.egan@gmail.com
+  name = Joseph Egan
 [alias]
-	gl = log --graph --decorate --format=oneline --all
-	ap = add --patch
-	ca = commit --amend
-	cne = commit --amend --no-edit
-	fa = fetch --all --prune
-	ff = merge --ff-only
-	rh = reset --hard
-	rhm = reset --hard origin/master
-	preview-purge = clean -fxdn :/
-	purge = clean -fxd :/
+  ap = add --patch
+  audit = log --follow --patch --stat --
+  ca = commit --amend
+  cne = commit --amend --no-edit
+  fa = fetch --all --prune
+  ff = merge --ff-only
+  gl = log --graph --decorate --format=oneline --all
+  preview-purge = clean -fxdn :/
+  purge = clean -fxd :/
+  rh = reset --hard
+  rhm = reset --hard origin/master
 [core]
-	editor = vim
+  editor = vim
