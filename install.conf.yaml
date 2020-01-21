@@ -1,20 +1,43 @@
+# vim:ts=4:sw=4:et:sts=4
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
+    -
+        description: Installing submodules
+        command: git submodule update --init --recursive
+    -
+        description: Enable COPR repo for alacritty
+        command: sudo dnf copr enable -y pschyska/alacritty
+        stdin: true
+        stdout: true
+    -
+        description: Install pkgs
+        command: "sudo dnf install -y
+            alacritty
+            bat
+            clipit
+            dictd
+            exa
+            feh
+            git
+            gnome-dictionary
+            i3
+            vim
+            zsh"
+        stdin: true
+        stdout: true
 
 - defaults:
     link:
-      relink: true
+        relink: true
 
-- clean: ['~']
+- clean: ["~", "~/config"]
 
 - link:
+    ~/.config/alacritty: alacritty
+    ~/.config/clipit: clipit
+    ~/.config/i3: i3
+    ~/.gitconfig: gitconfig
+    ~/.oh-my-zsh: oh-my-zsh
     ~/.vim: vim
     ~/.vimrc: vimrc
-    ~/.config/nvim/init.vim: vimrc
-    ~/.config/i3/config: i3
-    ~/.config/fontconfig/fonts.conf:
-      create: true
-      path: fonts.conf
-    ~/.config/polybar: polybar
-    ~/.gitconfig: gitconfig
-    ~/.Xresources: Xresources
+    ~/.zsh.d: zsh.d
+    ~/.zshrc: zshrc

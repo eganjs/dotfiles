@@ -1,8 +1,12 @@
 " general
-syntax on
+syntax enable
 set number
 set relativenumber
 set virtualedit=all
+
+" theme
+set background=dark
+colorscheme solarized
 
 " search
 set hlsearch
@@ -11,18 +15,12 @@ set ignorecase
 set incsearch
 
 " tabs
-set autoindent
-set expandtab
+set tabstop=2
 set shiftwidth=2
-set smartindent
-set smarttab
+set expandtab
 set softtabstop=2
-
-" theme
-set background=dark
-
-" filetype
-autocmd filetype lisp setlocal tabstop=2 shiftwidth=2 expandtab
+set autoindent
+inoremap <S-Tab> <C-d>
 
 " plugins
 
@@ -33,3 +31,6 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 set runtimepath^=~/.vim/bundle/vim-better-whitespace
 let g:strip_whitespace_on_save=1
 let g:strip_whitespace_confirm=0
+
+"" https://github.com/airblade/vim-gitgutter
+set runtimepath^=~/.vim/bundle/vim-gitgutter
