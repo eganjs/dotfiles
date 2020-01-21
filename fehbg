@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --bg-fill '/usr/share/backgrounds/f31/default/wide/f31.png' 

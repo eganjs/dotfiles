@@ -17,9 +17,12 @@
             dictd
             exa
             feh
+            firefox
+            firejail
             git
             gnome-dictionary
             i3
+            util-linux-user
             vim
             zsh"
         stdin: true
@@ -35,9 +38,15 @@
     ~/.config/alacritty: alacritty
     ~/.config/clipit: clipit
     ~/.config/i3: i3
+    ~/.fehbg: fehbg
     ~/.gitconfig: gitconfig
     ~/.oh-my-zsh: oh-my-zsh
     ~/.vim: vim
     ~/.vimrc: vimrc
     ~/.zsh.d: zsh.d
     ~/.zshrc: zshrc
+
+- shell:
+    -
+        description: Change shell to zsh
+        command: sudo chsh -s /usr/bin/zsh eganjs
