@@ -39,4 +39,5 @@
     ~/.oh-my-zsh: oh-my-zsh
     ~/.vim: vim
     ~/.vimrc: vimrc
+    ~/.zsh.d: zsh.d
     ~/.zshrc: zshrc
