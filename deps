@@ -1,3 +1,0 @@
-sudo dnf copr enable pschyska/alacritty
-sudo dnf install alacritty
-sudo dnf install feh

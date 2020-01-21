@@ -3,7 +3,7 @@
 # vars
 set $mod Mod4
 set $terminal alacritty
-set $browser firejail --profile=firefox firefox-x11
+set $browser firejail firefox
 bindsym Control+q nop "override ctrl+q in Firefox"
 
 set $alt_left h
@@ -40,7 +40,8 @@ bindsym $mod+Return exec $terminal
 bindsym $mod+w exec $browser
 
 # startup applications
-exec --no-startup-id sh ~/.fehbg # background
+exec sh ~/.fehbg # background
+exec clipit -d # clipboard manager
 exec jetbrains-toolbox --minimize # ide manager
 
 # application config
@@ -284,13 +285,13 @@ bar {
 		separator #073642
 		background #002b36
 		statusline #839496
-		focused_workspace #93a1a1 #93a1a1 #002b36 #002b36
+		focused_workspace #d33682 #d33682 #002b36 #002b36
 		active_workspace #586e75 #586e75 #002b36 #002b36
 		inactive_workspace #073642 #073642 #839496 #839496
-		urgent_workspace #d33682 #d33682 #002b36 #002b36
+		urgent_workspace #b58900 #b58900 #002b36 #002b36
 	}
 }
 client.focused #d33682 #d33682 #002b36 #b58900
 client.focused_inactive #586e75 #586e75 #002b36 #586e75
 client.unfocused #073642 #073642 #839496 #073642
-client.urgent #d33682 #d33682 #002b36 #d33682
+client.urgent #b58900 #b58900 #002b36 #b58900
