@@ -267,7 +267,7 @@ bindsym $mod+Shift+Tab workspace prev
 # system lifecycle
 set $system "system: (l) lock, (shift+e) logout, (shift+r) reboot, (shift+s) shutdown"
 mode $system {
-	bindsym l exec i3lock, mode "default"
+	bindsym l exec i3lock -c 002b36, mode "default"
 	bindsym Shift+e exec i3-msg exit, mode "default"
 	bindsym Shift+r exec systemctl reboot, mode "default"
 	bindsym Shift+s exec systemctl -i poweroff, mode "default"
