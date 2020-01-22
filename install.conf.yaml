@@ -9,10 +9,16 @@
         stdin: true
         stdout: true
     -
+        description: Enable COPR repo for Bazel
+        command: sudo dnf copr enable -y vbatts/bazel
+        stdin: true
+        stdout: true
+    -
         description: Install pkgs
         command: "sudo dnf install -y
             alacritty
             bat
+            bazel
             clipit
             dictd
             exa
