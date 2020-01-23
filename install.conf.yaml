@@ -9,7 +9,7 @@
         stdin: true
         stdout: true
     -
-        description: Install pkgs
+        description: Install dnf pkgs
         command: "sudo dnf install -y
             alacritty
             bat
@@ -22,9 +22,16 @@
             git
             gnome-dictionary
             i3
+            python3-pip
             util-linux-user
             vim
             zsh"
+        stdin: true
+        stdout: true
+    -
+        description: Install pip3 pkgs
+        command: "sudo pip3 install
+            jedi"
         stdin: true
         stdout: true
 
@@ -49,4 +56,4 @@
 - shell:
     -
         description: Change shell to zsh
-        command: sudo chsh -s /usr/bin/zsh eganjs
+        command: sudo chsh -s /usr/bin/zsh $USER

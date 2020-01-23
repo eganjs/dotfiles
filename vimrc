@@ -34,3 +34,6 @@ let g:strip_whitespace_confirm=0
 
 "" https://github.com/airblade/vim-gitgutter
 set runtimepath^=~/.vim/bundle/vim-gitgutter
+
+"" https://github.com/davidhalter/jedi-vim
+set runtimepath^=~/.vim/bundle/jedi-vim
