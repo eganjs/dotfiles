@@ -2,9 +2,6 @@
 
 # vars
 set $mod Mod4
-set $terminal alacritty
-set $browser firejail firefox
-bindsym Control+q nop "override ctrl+q in Firefox"
 
 set $alt_left h
 set $alt_down j
@@ -36,12 +33,18 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # applications
-bindsym $mod+Return exec $terminal
-bindsym $mod+w exec $browser
+
+## terminal
+bindsym $mod+Return exec alacritty
+
+## firefox
+bindsym $mod+w exec firejail firefox
+bindsym $mod+Shift+w exec firejail firefox --private-window
+bindsym Control+q nop "override ctrl+q in Firefox"
 
 # startup applications
 exec sh ~/.fehbg # background
-exec clipit -d # clipboard manager
+exec clipit # clipboard manager
 exec jetbrains-toolbox --minimize # ide manager
 
 # application config
