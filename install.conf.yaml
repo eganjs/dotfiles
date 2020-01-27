@@ -50,6 +50,7 @@
     ~/.oh-my-zsh: oh-my-zsh
     ~/.vim: vim
     ~/.vimrc: vimrc
+    ~/.wallpapers: wallpapers
     ~/.zsh.d: zsh.d
     ~/.zshrc: zshrc
 

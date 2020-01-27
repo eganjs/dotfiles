@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --bg-fill '/usr/share/backgrounds/f31/default/wide/f31.png' 
+feh --bg-center '/home/eganjs/.wallpapers/walls/solarized-dark/solarized-wallpaper-fedora.png'
