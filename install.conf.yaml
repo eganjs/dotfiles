@@ -3,6 +3,7 @@
     -
         description: Installing submodules
         command: git submodule update --init --recursive
+        stdout: true
     -
         description: Enable COPR repo for alacritty
         command: sudo dnf copr enable -y pschyska/alacritty
@@ -22,6 +23,7 @@
             git
             gnome-dictionary
             i3
+            maim
             python3-pip
             util-linux-user
             vim
