@@ -10,6 +10,16 @@
         stdin: true
         stdout: true
     -
+        description: Add NodeJS 10.x repo
+        command: curl --silent --location https://rpm.nodesource.com/setup_10.x | sudo bash -
+        stdin: true
+        stdout: true
+    -
+        description: Add Yarn repo
+        command: curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo
+        stdin: true
+        stdout: true
+    -
         description: Install dnf pkgs
         command: "sudo dnf install -y
             alacritty
@@ -27,6 +37,7 @@
             python3-pip
             util-linux-user
             vim
+            yarn
             zsh"
         stdin: true
         stdout: true
