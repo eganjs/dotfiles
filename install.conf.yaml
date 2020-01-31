@@ -35,8 +35,10 @@
             i3
             maim
             python3-pip
+            ranger
             util-linux-user
             vim-x11
+            w3m-img
             yarn
             zsh"
         stdin: true
@@ -58,6 +60,7 @@
     ~/.config/alacritty: alacritty
     ~/.config/clipit: clipit
     ~/.config/i3: i3
+    ~/.config/ranger: ranger
     ~/.fehbg: fehbg
     ~/.gitconfig: gitconfig
     ~/.oh-my-zsh: oh-my-zsh
