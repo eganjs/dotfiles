@@ -22,6 +22,12 @@ set softtabstop=2
 set autoindent
 inoremap <S-Tab> <C-d>
 
+" copy paste bindings
+noremap <Leader>y "*y
+noremap <Leader>p "*p
+noremap <Leader>Y "+y
+noremap <Leader>P "+p
+
 " plugins
 
 "" https://github.com/ctrlpvim/ctrlp.vim.git

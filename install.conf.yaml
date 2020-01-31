@@ -36,7 +36,7 @@
             maim
             python3-pip
             util-linux-user
-            vim
+            vim-x11
             yarn
             zsh"
         stdin: true
