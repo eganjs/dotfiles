@@ -37,7 +37,7 @@
             python3-pip
             ranger
             util-linux-user
-            vim-x11
+            vim-X11
             w3m-img
             yarn
             zsh"
