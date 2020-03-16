@@ -22,23 +22,24 @@
     -
         description: Install dnf pkgs
         command: "sudo dnf install -y
-            alacritty
-            bat
-            clipit
-            dictd
-            exa
-            feh
+            alacritty # terminal
+            bat # syntax highlighted file echoing
+            clipit # clipboard manager
+            dictd # cli dictionary
+            exa # 'replacement' for ls
+            feh # background
             firefox
             firejail
             git
-            gnome-dictionary
+            gnome-dictionary # offline dictionary cache
+            highlight # syntax highlighted code previews for ranger
             i3
-            maim
+            maim # cli for screenshots
             python3-pip
-            ranger
-            util-linux-user
-            vim-X11
-            w3m-img
+            ranger # file manager
+            util-linux-user # for chsh
+            vim-X11 # vim distribution with x11 clipboard access
+            w3m-img # image preview for ranger
             yarn
             zsh"
         stdin: true
