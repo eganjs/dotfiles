@@ -7,10 +7,12 @@
   ap = add --patch
   audit = log --follow --patch --stat --
   ca = commit --amend
+  ch = checkout
   cne = commit --amend --no-edit
   fa = fetch --all --prune
   ff = merge --ff-only
   gl = log --graph --decorate --format=oneline --all
+  pk = cherry-pick
   preview-purge = clean -fxdn :/
   purge = clean -fxd :/
   rh = reset --hard
