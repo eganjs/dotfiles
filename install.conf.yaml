@@ -45,6 +45,9 @@
         stdin: true
         stdout: true
     -
+        description: Install pyenv
+        command: "[[ -e ${HOME}/.pyenv ]] || curl https://pyenv.run | bash && pyenv update"
+    -
         description: Install pip3 pkgs
         command: "sudo pip3 install
             jedi"
