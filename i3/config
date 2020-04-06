@@ -51,9 +51,9 @@ exec jetbrains-toolbox --minimize # ide manager
 for_window [title="^JetBrains Toolbox$"] floating enable
 
 # screenshot
-bindsym Print exec --no-startup-id "scrot '%S.png' \
-	-e 'mv $f $$(xdg-user-dir PICTURES)/screenshot-%S-$wx$h.png \
-	; gpicview $$(xdg-user-dir PICTURES)/screenshot-%S-$wx$h.png'"
+# maim -i $(xdotool getactivewindow) ~/Downloads/screenshots/maim-$(date +%F-%H-%M).png
+bindsym Print exec --no-startup-id "image_file=~/Downloads/screenshots/maim-$(date +%F-%H-%M).png ; maim --hidecursor --nodecorations --window=$(xdotool getactivewindow) $image_file; notify-send 'screenshot saved' ; xclip -selection clipboard -t image/png < $image_file ; notify-send 'screenshot copied to clipboard' ; unset image_file"
+bindsym Shift+Print exec --no-startup-id "image_file=~/Downloads/screenshots/maim-$(date +%F-%H-%M).png ; maim --hidecursor --nodecorations --select --color 0.157,0.333,0.466 $image_file; notify-send 'screenshot saved' ; xclip -selection clipboard -t image/png < $image_file ; notify-send 'screenshot copied to clipboard' ; unset image_file"
 
 # backlight
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5
